@@ -84,8 +84,9 @@ public:
     virtual void output() override;                                     //输出
     
     //友元
+    template <class U>
     friend std::ostream & operator<<(std::ostream & os,                 //重载操作符<<
-                                     const SeqList & list);
+                                     const SeqList<U> & list);
 };
 
 
@@ -305,6 +306,7 @@ void SeqList<T>::input() {
         }
     }
     last_index = length - 1;
+    cout << "开始输入数据元素: " << endl;
     for (int i = 0; i < length; ++ i) {
         cin >> data[i];
     }
@@ -315,7 +317,7 @@ void SeqList<T>::input() {
  */
 template <class T>
 void SeqList<T>::output() {
-    std::cout << "元素最后的位置为:" << last_index << std::endl;
+    std::cout << "元素最后的下标为: " << last_index << std::endl;
     for (int i = 0; i <= last_index; ++ i) {
         std::cout << "#" << i + 1 << ": " << data[i] << std::endl;
     }
@@ -323,7 +325,7 @@ void SeqList<T>::output() {
 
 template <class T>
 std::ostream & operator<<(std::ostream & os, const SeqList<T> & seq_list) {
-    os << "元素最后的位置为:" << seq_list.last_index << "\n";
+    os << "元素最后的下标为: " << seq_list.last_index << "\n";
     for (int i = 0; i <= seq_list.last_index; ++ i) {
         os << "#" << i + 1 << ": " << seq_list.data[i] << "\n";
     }
