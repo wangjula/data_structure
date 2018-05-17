@@ -19,12 +19,12 @@ SeqList<T> & union_list(SeqList<T> & la, const SeqList<T> & lb);
 template <class T>
 SeqList<T> & intersaction_list(SeqList<T> & la, const SeqList<T> & lb);
 
-
+/*
 int main(int argc, const char * argv[]) {
     using std::cout;
     using std::endl;
     using std::cin;
-    
+*/
 //    SeqList<int> list(5);
 //    list.input();
 //    list.output();
@@ -88,7 +88,7 @@ int main(int argc, const char * argv[]) {
 //    cout << endl;
     
     /*测试循环链表*/
-    CircularList<int> list;
+    /*CircularList<int> list;
     list.Input();
     list.Output();
     cout << endl;
@@ -115,8 +115,8 @@ int main(int argc, const char * argv[]) {
     cout << endl;
 
     return 0;
-}
-
+}*/
+     
 /*求顺序表并集*/
 template <class T>
 SeqList<T> & union_list(SeqList<T> & la, const SeqList<T> & lb) {
