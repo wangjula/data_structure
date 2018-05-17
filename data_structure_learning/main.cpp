@@ -9,6 +9,7 @@
 #include <iostream>
 #include "seq_list.hpp"
 #include "linked_list.hpp"
+#include "circular_list.hpp"
 
 /*求顺序表并集*/
 template <class T>
@@ -63,9 +64,32 @@ int main(int argc, const char * argv[]) {
 //    intersaction_list(la, lb);
 //    la.output();
     
-    /*测试单链表*/
-    LinkedList<int> list;
-    list.InputFront();
+//    /*测试单链表*/
+//    LinkedList<int> list;
+//    list.InputFront();
+//    list.Output();
+//    cout << endl;
+//    cout << "插入一个节点：" << endl;
+//    int item;
+//    cin >> item;
+//    if (list.InsertBack(1, item)) {
+//        cout << "插入成功：" << endl;
+//        list.Output();
+//        cout << endl;
+//    }
+//    cout << "元素长度为：" << list.Length() << endl;
+//    cout << "删除第1个元素，删除后：" << endl;
+//    list.Remove(1);
+//    list.Output();
+//    cout << endl;
+//    LinkedList<char> c_list;
+//    c_list.InputRear();
+//    c_list.Output();
+//    cout << endl;
+    
+    /*测试循环链表*/
+    CircularList<int> list;
+    list.Input();
     list.Output();
     cout << endl;
     cout << "插入一个节点：" << endl;
@@ -78,15 +102,18 @@ int main(int argc, const char * argv[]) {
     }
     cout << "元素长度为：" << list.Length() << endl;
     cout << "删除第1个元素，删除后：" << endl;
-    list.Remove(1);
+    list.Remove(1, item);
     list.Output();
     cout << endl;
-    
-//    LinkedList<char> c_list;
-//    c_list.InputRear();
-//    c_list.Output();
-//    cout << endl;
-    
+    cout << "计算第2个节点为：";
+    list.getData(2, item);
+    cout << item;
+    cout << endl;
+    cout << "计算第20个节点为：";
+    list.getData(100, item);
+    cout << item;
+    cout << endl;
+
     return 0;
 }
 

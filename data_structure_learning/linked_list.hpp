@@ -45,7 +45,7 @@ public:
     bool getData(int i, T & item) const;                                 //获取链表元素
     bool setData(int i, const T & item);                                 //设置链表元素
     bool InsertBack(int i, const T & item);                              //插入元素
-    bool Remove(int i);                                                  //删除元素
+    bool Remove(int i, T & item);                                        //删除元素
     bool IsEmpty() const {return head -> m_next == nullptr;}             //判断表空
     bool IsFull() const {return false;}                                  //判断表满
     void Sort();                                                         //排序
@@ -172,6 +172,10 @@ typename LinkedList<T>::Node * LinkedList<T>::Search(T & item) const {
  */
 template <class T>
 void LinkedList<T>::MakeEmpty() {
+    if (head == nullptr) {                        //兼容移动构造函数将源链表的头节点置为空的情况
+        return;
+    }
+    
     Node * curr_ptr = head -> m_next;
     while (curr_ptr != nullptr) {
         head -> m_next = curr_ptr -> m_next;
@@ -240,10 +244,11 @@ bool LinkedList<T>::InsertBack(int i, const T & item) {
  * 删除第i个元素
  */
 template <class T>
-bool LinkedList<T>::Remove(int i) {
+bool LinkedList<T>::Remove(int i, T & item) {
     Node * curr_ptr = Locate(i - 1);
     if (curr_ptr != nullptr && curr_ptr -> m_next != nullptr) {
         Node * del_ptr = curr_ptr -> m_next;
+        item = del_ptr -> m_data;
         curr_ptr -> m_next = del_ptr -> m_next;
         delete del_ptr;
         return true;
