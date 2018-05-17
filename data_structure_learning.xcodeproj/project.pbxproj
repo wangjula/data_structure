@@ -23,9 +23,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C30F5E9B20AC382E008B81F9 /* seq_list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = seq_list.hpp; sourceTree = "<group>"; };
 		C34C7E1020A2812400598DAA /* data_structure_learning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = data_structure_learning; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34C7E1320A2812400598DAA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C34C7E1B20A281FD00598DAA /* linear_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = linear_list.hpp; sourceTree = "<group>"; };
+		C3B5FE5A20AC768500D8A781 /* linked_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = linked_list.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,10 @@
 		C34C7E1220A2812400598DAA /* data_structure_learning */ = {
 			isa = PBXGroup;
 			children = (
-				C34C7E1320A2812400598DAA /* main.cpp */,
 				C34C7E1B20A281FD00598DAA /* linear_list.hpp */,
+				C3B5FE5A20AC768500D8A781 /* linked_list.hpp */,
+				C34C7E1320A2812400598DAA /* main.cpp */,
+				C30F5E9B20AC382E008B81F9 /* seq_list.hpp */,
 			);
 			path = data_structure_learning;
 			sourceTree = "<group>";
