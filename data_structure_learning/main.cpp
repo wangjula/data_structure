@@ -7,17 +7,17 @@
 //
 
 #include <iostream>
-#include "seq_list.hpp"
-#include "linked_list.hpp"
-#include "circular_list.hpp"
+//#include "seq_list.hpp"
+//#include "linked_list.hpp"
+//#include "circular_list.hpp"
 
 /*求顺序表并集*/
-template <class T>
-SeqList<T> & union_list(SeqList<T> & la, const SeqList<T> & lb);
-
-/*求顺序表交集*/
-template <class T>
-SeqList<T> & intersaction_list(SeqList<T> & la, const SeqList<T> & lb);
+//template <class T>
+//SeqList<T> & union_list(SeqList<T> & la, const SeqList<T> & lb);
+//
+///*求顺序表交集*/
+//template <class T>
+//SeqList<T> & intersaction_list(SeqList<T> & la, const SeqList<T> & lb);
 
 /*
 int main(int argc, const char * argv[]) {
@@ -110,52 +110,84 @@ int main(int argc, const char * argv[]) {
     cout << item;
     cout << endl;
     cout << "计算第20个节点为：";
-    list.getData(100, item);
+    list.getData(20, item);
     cout << item;
     cout << endl;
 
     return 0;
 }*/
      
-/*求顺序表并集*/
-template <class T>
-SeqList<T> & union_list(SeqList<T> & la, const SeqList<T> & lb) {
-    int length_a = la.Length();
-    int length_b = lb.Length();
-    if (la.Size() < length_a + length_b) {
-        std::cerr << "La长度过短，无法容纳合并的结果" << std::endl;
-        exit(EXIT_FAILURE);
-    }
-    T item;
-    int i = 1;
-    while (i <= length_b) {
-        lb.getData(i, item);
-        if (la.Search(item) == 0) {
-            la.InsertBack(length_a ++, item);
-        }
-        ++ i;
-    }
-    return la;
-}
+///*求顺序表并集*/
+//template <class T>
+//SeqList<T> & union_list(SeqList<T> & la, const SeqList<T> & lb) {
+//    int length_a = la.Length();
+//    int length_b = lb.Length();
+//    if (la.Size() < length_a + length_b) {
+//        std::cerr << "La长度过短，无法容纳合并的结果" << std::endl;
+//        exit(EXIT_FAILURE);
+//    }
+//    T item;
+//    int i = 1;
+//    while (i <= length_b) {
+//        lb.getData(i, item);
+//        if (la.Search(item) == 0) {
+//            la.InsertBack(length_a ++, item);
+//        }
+//        ++ i;
+//    }
+//    return la;
+//}
+//
+//template <class T>
+//SeqList<T> & intersaction_list(SeqList<T> & la, const SeqList<T> & lb) {
+//    int length_a = la.Length();
+//    int length_b = lb.Length();
+//    if (length_b > la.Size()) {
+//        std::cerr << "La长度过短，无法容纳求交集的结果" << std::endl;
+//        exit(EXIT_FAILURE);
+//    }
+//    T item;
+//    int i = 1;
+//    while (i <= length_a) {
+//        la.getData(i, item);
+//        if (lb.Search(item)) {
+//            ++ i;
+//        } else {
+//            la.Remove(i, item);
+//            -- length_a;
+//        }
+//    }
+//    return la;
+//}
 
-template <class T>
-SeqList<T> & intersaction_list(SeqList<T> & la, const SeqList<T> & lb) {
-    int length_a = la.Length();
-    int length_b = lb.Length();
-    if (length_b > la.Size()) {
-        std::cerr << "La长度过短，无法容纳求交集的结果" << std::endl;
-        exit(EXIT_FAILURE);
+/*测试双向循环链表*/
+#include "doubly_linked_list.hpp"
+int main() {
+    using namespace std;
+    DoublyLinkedList<int> list;
+    list.Input();
+    list.Output();
+    cout << endl;
+    cout << "插入一个节点：" << endl;
+    int item;
+    cin >> item;
+    if (list.Insert(item)) {
+        cout << "插入成功：" << endl;
+        list.Output();
+        cout << endl;
     }
-    T item;
-    int i = 1;
-    while (i <= length_a) {
-        la.getData(i, item);
-        if (lb.Search(item)) {
-            ++ i;
-        } else {
-            la.Remove(i, item);
-            -- length_a;
-        }
-    }
-    return la;
+    cout << "删除第1个元素，删除后：" << endl;
+    list.Remove(1, item);
+    list.Output();
+    cout << endl;
+    cout << "计算第2个节点为：";
+    list.getData(2, item);
+    cout << item;
+    cout << endl;
+    cout << "计算第20个节点为：";
+    list.getData(20, item);
+    cout << item;
+    cout << endl;
+    
+    return 0;
 }
