@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C301A33A20AD8EC200870DF3 /* Josephus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C301A33920AD8EC200870DF3 /* Josephus.cpp */; };
+		C31D5AC920AF2F7B009C580D /* polynomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31D5AC720AF2F7B009C580D /* polynomial.cpp */; };
 		C34C7E1420A2812400598DAA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C7E1320A2812400598DAA /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		C301A33920AD8EC200870DF3 /* Josephus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Josephus.cpp; sourceTree = "<group>"; };
 		C30F5E9B20AC382E008B81F9 /* seq_list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = seq_list.hpp; sourceTree = "<group>"; };
+		C31D5AC720AF2F7B009C580D /* polynomial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = polynomial.cpp; sourceTree = "<group>"; };
+		C31D5AC820AF2F7B009C580D /* polynomial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = polynomial.hpp; sourceTree = "<group>"; };
 		C34A78C120AE5E560075B7AE /* doubly_linked_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = doubly_linked_list.hpp; sourceTree = "<group>"; };
 		C34C7E1020A2812400598DAA /* data_structure_learning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = data_structure_learning; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34C7E1320A2812400598DAA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				C30F5E9B20AC382E008B81F9 /* seq_list.hpp */,
 				C301A33920AD8EC200870DF3 /* Josephus.cpp */,
 				C34A78C120AE5E560075B7AE /* doubly_linked_list.hpp */,
+				C31D5AC720AF2F7B009C580D /* polynomial.cpp */,
+				C31D5AC820AF2F7B009C580D /* polynomial.hpp */,
 			);
 			path = data_structure_learning;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C301A33A20AD8EC200870DF3 /* Josephus.cpp in Sources */,
+				C31D5AC920AF2F7B009C580D /* polynomial.cpp in Sources */,
 				C34C7E1420A2812400598DAA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

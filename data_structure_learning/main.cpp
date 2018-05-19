@@ -160,34 +160,44 @@ int main(int argc, const char * argv[]) {
 //    return la;
 //}
 
-/*测试双向循环链表*/
-#include "doubly_linked_list.hpp"
+///*测试双向循环链表*/
+//#include "doubly_linked_list.hpp"
+//int main() {
+//    using namespace std;
+//    DoublyLinkedList<int> list;
+//    list.Input();
+//    list.Output();
+//    cout << endl;
+//    cout << "插入一个节点：" << endl;
+//    int item;
+//    cin >> item;
+//    if (list.Insert(item)) {
+//        cout << "插入成功：" << endl;
+//        list.Output();
+//        cout << endl;
+//    }
+//    cout << "删除第1个元素，删除后：" << endl;
+//    list.Remove(1, item);
+//    list.Output();
+//    cout << endl;
+//    cout << "计算第2个节点为：";
+//    list.getData(2, item);
+//    cout << item;
+//    cout << endl;
+//    cout << "计算第20个节点为：";
+//    list.getData(20, item);
+//    cout << item;
+//    cout << endl;
+//
+//    return 0;
+//}
+
+/*测试多项式*/
+#include "polynomial.hpp"
 int main() {
-    using namespace std;
-    DoublyLinkedList<int> list;
-    list.Input();
-    list.Output();
-    cout << endl;
-    cout << "插入一个节点：" << endl;
-    int item;
-    cin >> item;
-    if (list.Insert(item)) {
-        cout << "插入成功：" << endl;
-        list.Output();
-        cout << endl;
-    }
-    cout << "删除第1个元素，删除后：" << endl;
-    list.Remove(1, item);
-    list.Output();
-    cout << endl;
-    cout << "计算第2个节点为：";
-    list.getData(2, item);
-    cout << item;
-    cout << endl;
-    cout << "计算第20个节点为：";
-    list.getData(20, item);
-    cout << item;
-    cout << endl;
-    
-    return 0;
+    Polynomial p1;
+    std::cin >> p1;
+    std::cout << "p1: " << p1;
+    std::cout << "p1 + p1: " << p1 + p1;
+    std::cout << "p1 * p1: " << p1 * p1;
 }
