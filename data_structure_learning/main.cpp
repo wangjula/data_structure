@@ -193,11 +193,11 @@ int main(int argc, const char * argv[]) {
 //}
 
 /*测试多项式*/
-#include "polynomial.hpp"
-int main() {
-    Polynomial p1;
-    std::cin >> p1;
-    std::cout << "p1: " << p1;
-    std::cout << "p1 + p1: " << p1 + p1;
-    std::cout << "p1 * p1: " << p1 * p1;
-}
+//#include "polynomial.hpp"
+//int main() {
+//    Polynomial p1;
+//    std::cin >> p1;
+//    std::cout << "p1: " << p1;
+//    std::cout << "p1 + p1: " << p1 + p1;
+//    std::cout << "p1 * p1: " << p1 * p1;
+//}
