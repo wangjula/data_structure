@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C301A33A20AD8EC200870DF3 /* Josephus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C301A33920AD8EC200870DF3 /* Josephus.cpp */; };
+		C31C055120E6782400A58540 /* test_seq_stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31C055020E6782400A58540 /* test_seq_stack.cpp */; };
 		C31D5AC920AF2F7B009C580D /* polynomial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C31D5AC720AF2F7B009C580D /* polynomial.cpp */; };
 		C34C7E1420A2812400598DAA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C34C7E1320A2812400598DAA /* main.cpp */; };
-		C3D4154E20E5007E008F16F6 /* static_list.hpp in Sources */ = {isa = PBXBuildFile; fileRef = C3D4154D20E5007E008F16F6 /* static_list.hpp */; };
 		C3D4155320E5238F008F16F6 /* test_static_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3D4155220E5238F008F16F6 /* test_static_list.cpp */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +29,9 @@
 /* Begin PBXFileReference section */
 		C301A33920AD8EC200870DF3 /* Josephus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Josephus.cpp; sourceTree = "<group>"; };
 		C30F5E9B20AC382E008B81F9 /* seq_list.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = seq_list.hpp; sourceTree = "<group>"; };
+		C31C054B20E6607100A58540 /* static_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = static_list.hpp; sourceTree = "<group>"; };
+		C31C054E20E6610200A58540 /* seq_stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = seq_stack.hpp; sourceTree = "<group>"; };
+		C31C055020E6782400A58540 /* test_seq_stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_seq_stack.cpp; sourceTree = "<group>"; };
 		C31D5AC720AF2F7B009C580D /* polynomial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = polynomial.cpp; sourceTree = "<group>"; };
 		C31D5AC820AF2F7B009C580D /* polynomial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = polynomial.hpp; sourceTree = "<group>"; };
 		C34A78C120AE5E560075B7AE /* doubly_linked_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = doubly_linked_list.hpp; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		C34C7E1B20A281FD00598DAA /* linear_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = linear_list.hpp; sourceTree = "<group>"; };
 		C3B1C8CF20AD743A00FAF993 /* circular_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = circular_list.hpp; sourceTree = "<group>"; };
 		C3B5FE5A20AC768500D8A781 /* linked_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = linked_list.hpp; sourceTree = "<group>"; };
-		C3D4154D20E5007E008F16F6 /* static_list.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = static_list.hpp; sourceTree = "<group>"; };
 		C3D4155220E5238F008F16F6 /* test_static_list.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_static_list.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +83,8 @@
 				C34A78C120AE5E560075B7AE /* doubly_linked_list.hpp */,
 				C31D5AC720AF2F7B009C580D /* polynomial.cpp */,
 				C31D5AC820AF2F7B009C580D /* polynomial.hpp */,
-				C3D4154D20E5007E008F16F6 /* static_list.hpp */,
+				C31C054B20E6607100A58540 /* static_list.hpp */,
+				C31C054E20E6610200A58540 /* seq_stack.hpp */,
 			);
 			path = data_structure_learning;
 			sourceTree = "<group>";
@@ -90,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C3D4155220E5238F008F16F6 /* test_static_list.cpp */,
+				C31C055020E6782400A58540 /* test_seq_stack.cpp */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -152,9 +156,9 @@
 			files = (
 				C301A33A20AD8EC200870DF3 /* Josephus.cpp in Sources */,
 				C31D5AC920AF2F7B009C580D /* polynomial.cpp in Sources */,
+				C31C055120E6782400A58540 /* test_seq_stack.cpp in Sources */,
 				C3D4155320E5238F008F16F6 /* test_static_list.cpp in Sources */,
 				C34C7E1420A2812400598DAA /* main.cpp in Sources */,
-				C3D4154E20E5007E008F16F6 /* static_list.hpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

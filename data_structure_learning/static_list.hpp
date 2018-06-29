@@ -1,5 +1,5 @@
 //
-//  static_list.cpp
+//  static_list.hpp
 //  data_structure_learning
 //
 //  Created by 王久亮 on 2018/6/28.
@@ -188,3 +188,4 @@ bool StaticList<T>::IsEmpty() const {
     return elems[0].next == -1;
 };
 #endif /*STATIC_LIST_H_*/
+
