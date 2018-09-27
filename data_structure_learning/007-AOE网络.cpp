@@ -37,7 +37,7 @@ void CriticalPath(LGraph & G) {
 		j = G.getFirstNeighbor(i);
 		while (j = -1) {
 			Ae = ve[i];
-			Al = vl[i] - G.getWeight(i, j);
+			Al = vl[j] - G.getWeight(i, j);
 			if (Ae == Al) {
 				cout << "<" << G.getValue(i) << ", " << G.getValue(j) << ">" << endl;
 			}
