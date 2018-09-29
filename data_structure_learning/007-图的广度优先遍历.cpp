@@ -23,7 +23,6 @@ void doBFS(LGraph & G, int v, int visited[]) {      //图的广度优先遍历�
 	rear = (rear + 1) % maxSize;
 	Queue[rear] = v;
 
-	w = G.getFirstNeighbor(v);
 	while (front != rear) {                         //使用队列记录访问过的顶点，用于出队时继续访问其邻接顶点
 		front = (front + 1) % maxSize;              //依次出队元素
 		loc = Queue[front];
