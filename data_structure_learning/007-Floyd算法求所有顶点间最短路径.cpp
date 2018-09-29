@@ -28,7 +28,7 @@ void Floyd(LGraph & G, int a[][], int path[][]) {
 
 void printPath(int u, int v, int path[][]) {
 	if (path[u][v] == -1) {
-		cout << path[u][v] << " ";
+		cout << "<" << u << ", " << v << ">" << " ";
 	} else {
 		int mid = path[u][v];
 		printPath(u, mid, path);                   //处理mid的前半段路径
