@@ -46,7 +46,7 @@ void Prim(LGraph & G, char v0, MinSpanTree & mst) {
 void Prim(MGraph & G, int v0, int & sum) {
 	const int INF = INT_MAX;
 	int n = G.NumberOfEdges();
-	int * lowcost = new int[n]; 
+	int * lowcost = new int[n];                 //记录当前生成树到顶点i的最短边
 	bool * vmst = new bool[n];
 	int ** edges = G.getEdges();
 
@@ -70,7 +70,7 @@ void Prim(MGraph & G, int v0, int & sum) {
 		vmst[k] = true;                         //最短邻边的另一个顶点加入顶点集合
 		v = k;
 		sum += min;
-		for (j = 0; j < n; ++ j) {              //更新剩余顶点的lowcost[j]，即上个顶点的邻边，如果新加入的结点使路径更短，则更新
+		for (j = 0; j < n; ++ j) {              //剩余顶点的lowcost[j]，若生成树到顶点j有更短的边，则更新
 			if (vmst[j] == false && edges[v][j] < lowcost[j]) {
 				lowcost[j] = edges[v][j];
 			}
