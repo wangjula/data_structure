@@ -201,3 +201,43 @@ int main(int argc, const char * argv[]) {
 //    std::cout << "p1 + p1: " << p1 + p1;
 //    std::cout << "p1 * p1: " << p1 * p1;
 //}
+
+using namespace std;
+void QuickSort(int R[], int low, int high) {
+    int i, j;
+    int temp;
+    if (low < high) {
+        i = low;                                 //i, j为两个扫描指针，i之前的元素全部小于枢轴，j之后的元素全部大于枢轴
+        j = high;                                //i，j初始时指向两端，向中间扫描，相遇时扫描结束，一趟子序列排序完成
+        temp = R[low];                           //每趟排序，选择R[low]作为枢轴
+        while (i < j) {
+            while (j > i && R[j] >= temp) {
+                -- j;
+            }
+            if (i < j) {
+                R[i] = R[j];
+                ++ i;
+            }
+            
+            while (i < j && R[i] < temp) {
+                ++ i;
+            }
+            if (i < j) {
+                R[j] = R[i];
+                -- j;
+            }
+        }
+        R[i] = temp;
+        QuickSort(R, low, i - 1);
+        QuickSort(R, i + 1, high);
+    }
+}
+
+int main() {
+    int R[] = {1, 3, 8, 7, 9, 4};
+    QuickSort(R, 0, 5);
+    for (int i = 0; i < 6; ++ i) {
+        cout << R[i] << " ";
+    }
+    cout << endl;
+}
