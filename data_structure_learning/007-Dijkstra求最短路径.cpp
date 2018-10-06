@@ -8,7 +8,7 @@ void printPath(int path[], int start) {
 		stack[++ top] = path[start];
 		start = path[start];
 	}
-	stack[top ++] = a;                        //起点path[]值为-1，也需要加入栈
+	stack[top ++] = start;                    //起点path[]值为-1，也需要加入栈
 
 	while (top != -1) {                       //输出正向路径
 		cout << stack[top --] << " ";
