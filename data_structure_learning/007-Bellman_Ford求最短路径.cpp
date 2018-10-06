@@ -16,7 +16,7 @@ void Bellman_Ford(LGraph & G, int v, int dist[], int path[]) {
 	for (k = 2; k < n; ++ k) {                        //迭代n-2次(2 - n-2条边)
 		for (u = 0; u < n; ++ u) {
 			if (u != v) {
-				for (i = 0; i < n; ++ i) {            //分别计算u到i经过k条边的最短路径
+				for (i = 0; i < n; ++ i) {            //分别计算v到u经过顶点i且最多经过k条边的最短路径
 					w = G.getWeight(i, u);
 					if (w > 0 && w < maxValue && dist[u] > dist[i] + w) {
 						dist[u] = dist[i] + w;
