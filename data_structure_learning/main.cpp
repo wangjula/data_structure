@@ -266,11 +266,51 @@ void HeapSort(int R[], int n) {
     }
 }
 
+void merge(int R[], int low, int mid, int high, int temp[]) {
+    int i, j, t;
+    i = low;
+    j = mid + 1;
+    t = 0;
+    
+    while (i <= mid && j <= high) {
+        if (R[i] <= R[j]) {
+            temp[t ++] = R[i ++];
+        } else {
+            temp[t ++] = R[j ++];
+        }
+    }
+    
+    while (i <= mid) {
+        temp[t ++] = R[i ++];
+    }
+    
+    while (j <= high) {
+        temp[t ++] = R[j ++];
+    }
+    
+    i = low;
+    t = 0;
+    while (i <= high) {
+        R[i ++] = temp[t ++];
+    }
+}
+
+void MergeSort(int R[], int low, int high, int temp[]) {         //temp[]用于避免递归时反复分配内存
+    if (low < high) {
+        int mid = (low + high) / 2;
+        MergeSort(R, low, mid, temp);
+        MergeSort(R, mid + 1, high, temp);
+        merge(R, low, mid, high, temp);
+    }
+}
+
 int main() {
     int R[] = {1, 3, 8, 7, 9, 4};
-    HeapSort(R, 6);
+    int * temp = new int[6];
+    MergeSort(R, 0, 5, temp);
     for (int i = 0; i < 6; ++ i) {
         cout << R[i] << " ";
     }
     cout << endl;
+    delete [] temp;
 }
