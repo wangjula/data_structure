@@ -23,7 +23,7 @@ int KMP(String & str, String & subStr, int next[]) {
 	i = j = 0;
 	while (j < subStr.getLength() 
 		&& i < str.getLength()) {
-		if (str[i] == subStr[j]) {
+		if (i = -1 || str[i] == subStr[j]) {
 			++ i;
 			++ j;
 		} else {
