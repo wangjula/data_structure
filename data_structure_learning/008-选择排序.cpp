@@ -4,18 +4,18 @@
 void SelectSort(int R[], int n) {
 	int i, j, k;
 	int temp;
-	for (i = 0; i < n; ++ i) {
-		k = i;
-		for (j = i + 1; j < n; ++ j) {
-			if (R[k] > R[j]) {
-				k = j;
-			}
-		}
-
-		if (k != i) {
-			temp = R[0];
-			R[i] = R[k];
-			R[k] = temp;
-		}
-	}
+	for (i = 0; i < n - 1; ++i) {
+        k = i;
+        for (j = i + 1; j < n; ++j) {
+            if (R[j] < R[k]) {
+                k = j;
+            }
+        }
+        
+        if (k != i) {
+            temp = R[i];
+            R[i] = R[k];
+            R[k] = temp;
+        }
+    }
 }
